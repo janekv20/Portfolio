@@ -1,25 +1,125 @@
-html {
-    display:block;
+* {
     margin: 0;
     padding: 0;
-    border: 0;
-    font: inherit;
-    vertical-align: baseline;
+}
+
+/*apply styles to <header> */
+header {
+    padding: 20px 35px;
+    background-color: #3FA283;
 }
 
 body {
+    color: #3FA283;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #D5E6E1;
+    margin: 0;
+    display: inline;
+}
+
+header a {
+    text-decoration: none;
+    color: #D5E6E1;
+  }
+  header nav {
+    float: right;
+    margin: 7px 0;
+  }
+
+  header nav ul li {
+    display: inline;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    color: black;
-    background: teal;
-    font-size: 16px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    line-height: 1.5; 
-}
+  }
+  
+  header nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+  }
 
-#header_wrap {
-    background: teal;
-}
-
-.outer {
+  footer {
+    background: #3FA283;
     width: 100%;
+    padding: 40px 35px;
+  }
+
+  footer h2 {
+    display: inline;
+    color: #3FA283;
+    font-size: 30px;
+    margin: 0;
+  }
+
+  footer div {
+    float: right;
+    line-height: 1.5;
+    text-align: right;
+  }
+  footer a {
+    color: #3FA283;
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+}
+  section {
+    padding: 60px;
+  }
+
+.hero {
+    background-image: url("../images/teal-computer.jpg");
+    height: 800px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .float-left {
+    float: left;
+    margin-right: 25px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 25px;
+}
+
+.content {
+    width: 100%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.content-info {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #3FA283;
+    color: #ffffff;
+}
+
+.content-info img {
+    max-height: 200px;
+}
+
+.content-info h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
 }
