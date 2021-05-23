@@ -17,5 +17,5 @@ https://janekv20.github.io/Portfolio/
 https://github.com/janekv20/Portfolio
 
 ## Screenshots of Deployment
-
+<img src="assets/images/575px screenshot.png">
 
