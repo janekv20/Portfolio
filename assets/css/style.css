@@ -1,6 +1,7 @@
 :root {
-  --primary-color: #3FA283;
-  --secondary-color: #ffff;
+  --primary-color: #4B3F3F;
+  --secondary-color: #ABEBD2;
+  --tertiary-color: #454545;
 }
 
 
@@ -11,7 +12,8 @@
 }
 
 body {
-  color: #3FA283;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -19,7 +21,7 @@ body {
 
 header {
   padding: 20px 35px;
-  background-color: #3FA283;
+  background-color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -32,14 +34,14 @@ header {
 header h1 {
   font-weight: bold;
   font-size: 36px;
-  color: #D5E6E1;
+  color: var(--primary-color);
   margin: 0;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a {
   text-decoration: none;
-  color: #D5E6E1;
+  color: var(--primary-color);
 }
 
 header nav {
@@ -71,13 +73,10 @@ section {
 /*HERO STYLES START*/
 .hero {
   background-image: url("../images/teal-computer.jpg");
-  background-size: cover;
-  background-position: 80%;
+  background-position: 150%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: flex-start;
-  background-attachment: fixed;
 }
 
 /*HERO STYLES END*/
@@ -93,7 +92,7 @@ section {
   width: 50%;
 }
 .primary-border {
-  border-color: var(--secondary-color)
+  border-color: var(--primary-color)
 }
 
 /*ABOUT ME STYLES START*/
@@ -123,15 +122,16 @@ section {
 .project {
   margin: 20px;
   flex: 1;
-  background: var(--secondary-color);
-  color: var(--primary-color);
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .image-title {
   position: absolute;
   bottom:90%;
   left: 0;
-  background-color: slategrey;
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
   padding: 25px 15px;
 }
 
@@ -172,7 +172,7 @@ article {
 .project-info p {
   font-size: 17px;
 }
-/* TRAINER STYLES END */
+/* PROJECT STYLES END */
 
 /*Contact Me STYLES START*/
 
@@ -213,7 +213,6 @@ article {
   margin-bottom: 15px;
   margin-top: 5px;
   border-radius: 10px;
-  background-color: rgba(255,255,255, 0.75);
 }
 /*CONTACT ME STYLES END */
 
@@ -234,3 +233,77 @@ article {
   justify-content: space-between;
 }
 
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 1024px) {
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+    position: relative;
+  }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav ul {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+  }
+
+  .hero {
+    width: 100%;
+  }
+  
+  .section-title {
+    width: 80%;
+  }
+  
+  .projects {
+    flex: 0 70%;
+  }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 30px 15px;
+  }
+
+  .project-info h3 {
+    flex: 1 100%;
+    text-align: center;
+  }
+  .project img {
+    flex: 0 32%;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+
+  .section-title {
+    width: 95%;
+  }
+
+  .intro p {
+    width: 100%;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info > * {
+    flex: 0 100%;
+  }
+
+}
